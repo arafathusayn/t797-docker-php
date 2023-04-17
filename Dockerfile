@@ -33,3 +33,6 @@ RUN curl --silent --fail --location --retry 3 --output /tmp/installer.php --url 
   composer --ansi --version --no-interaction; \
   rm -f /tmp/installer.php; \
   find /tmp -type d -exec chmod -v 1777 {} +
+
+# Increase PHP memory limit
+RUN echo 'memory_limit = 256M' >> /usr/local/etc/php/conf.d/docker-php-memlimit.ini;
