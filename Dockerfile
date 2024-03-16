@@ -1,4 +1,4 @@
-FROM php:7.3-fpm
+FROM php:7.4-fpm
 
 RUN apt-get update && apt-get install -y default-mysql-client --no-install-recommends \
 	libfreetype6-dev \
